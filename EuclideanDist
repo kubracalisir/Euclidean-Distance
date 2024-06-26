@@ -1,0 +1,16 @@
+import math
+points=((1,2),(3,5),(6,10),(17,81),(39,100))
+x=[]
+y=[]
+for i in points:
+  x.append(i[0])
+  y.append(i[1])
+def euclideanDistance(x1,x2,y1,y2):
+  d=math.sqrt(abs((x1-x2)**2+abs(y1-y2)**2))
+  return d
+distances=[]
+for i in range(0,len(x)-1):
+  distances.append(euclideanDistance(x[i],x[i+1],y[i],y[i+1]))
+print(distances)          
+distances.sort()
+print(distances[0])
